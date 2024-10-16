@@ -41,6 +41,6 @@ git clone https://github.com/arthhmoreira/PetStoreTest.git
 cd PetStoreTest
 
 # Comando maven para rodar os testes
-mvn test # ou mvn clean install
+mvn clean install # ou mvn test 
 
 
