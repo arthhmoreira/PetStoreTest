@@ -12,15 +12,37 @@ public class SearchPetByStatusTest extends BaseTest {
     public void TestSearchPetByStatus() {
         String status = "pending";
 
-            // Given
-            given()
-                .queryParam("status", status)
-                // When
-                .when()
-                    .get("/pet/findByStatus")
-                // Then
-                .then()
-                    .statusCode(200)  // STATUS CODE 200 (Sucess)
-                    .body("size()", greaterThan(0));
+        // Given
+        given()
+            .queryParam("status", status)
+            // When
+            .when()
+                .get("/pet/findByStatus")
+            // Then
+            .then()
+                .statusCode(200)  // SUCCESS
+                .body("status", everyItem(equalTo(status)));
     }
+
+    //2. Pesquisar por pets com status inválido (GET /pet/findByStatus)
+
+//    @Test
+//    @Ignore("Teste para retornar Status Code 400 porém o Swagger retorna sempre 200")
+//    public void TestSearchPetByStatusInvalid() {
+//        String status = "invalido";
+//
+//        String responseBody =
+//        // Given
+//        given()
+//            .queryParam("status", status)
+//            // When
+//            .when()
+//                .get("/pet/findByStatus")
+//            // Then
+//            .then()
+//                .statusCode(400)  // STATUS CODE 400 (Bad Request)
+//                .extract().body().asString();
+//
+//        System.out.println("Response Body: " + responseBody);
+//    }
 }

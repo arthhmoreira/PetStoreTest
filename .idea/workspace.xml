@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="162bfa50-53cc-4de4-a4e4-4c05442d479c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/ApiKeyManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/PetOrderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/SearchPetByStatusTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/SearchPetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/UpdatePetDataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/model/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/model/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/ApiKeyManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/PetOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/PetOrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/SearchPetByStatusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/SearchPetByStatusTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/SearchPetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/SearchPetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/UpdatePetDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/UpdatePetDataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/model/Pet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/arthur/petstore/model/Tag.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +60,19 @@
     "JUnit.PetstoreApiTests.testCadastrarNovoPedido.executor": "Run",
     "JUnit.SearchPetByStatus.TestSearchPetByStatus.executor": "Run",
     "JUnit.SearchPetByStatus.executor": "Run",
+    "JUnit.SearchPetByStatusTest.TestSearchPetByStatus.executor": "Run",
+    "JUnit.SearchPetByStatusTest.TestSearchPetByStatusInvalid.executor": "Run",
     "JUnit.SearchPetTest.SearchExistentPetTest.executor": "Run",
+    "JUnit.SearchPetTest.SearchInexistentPetTest.executor": "Run",
     "JUnit.SearchPetTests.SearchExistentPetTest.executor": "Run",
     "JUnit.SearchPetTests.SearchInexistentPetTest.executor": "Run",
     "JUnit.SearchPetTests.SearchInvalidPetTest.executor": "Run",
     "JUnit.SearchPetTests.executor": "Run",
     "JUnit.UpdatePetData.UpdateExistentPetDataTest.executor": "Run",
     "JUnit.UpdatePetData.executor": "Run",
+    "JUnit.UpdatePetDataTest.UpdateExistentPetDataTest.executor": "Run",
+    "JUnit.UpdatePetDataTest.UpdateNonExistentPedDataTest.executor": "Run",
+    "JUnit.UpdatePetDataTest.UpdateNonExistentPetDataTest.executor": "Run",
     "JUnit.br.com.arthur.petstore in petStoreTest.executor": "Run",
     "JUnit.petstore in petStoreTest.executor": "Run",
     "JUnit.testCadastrarPedidoPetSucesso.TestPesquisarPetInexistente.executor": "Run",
@@ -96,8 +95,8 @@
       <recent name="br.com.arthur.petstore" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.br.com.arthur.petstore in petStoreTest">
-    <configuration name="PetOrderTest.PetOrderRegisterSucess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.petstore in petStoreTest">
+    <configuration name="SearchPetByStatusTest.TestSearchPetByStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="petStoreTest" />
       <extension name="coverage">
         <pattern>
@@ -106,14 +105,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.com.arthur.petstore" />
-      <option name="MAIN_CLASS_NAME" value="br.com.arthur.petstore.PetOrderTest" />
-      <option name="METHOD_NAME" value="PetOrderRegisterSucess" />
+      <option name="MAIN_CLASS_NAME" value="br.com.arthur.petstore.SearchPetByStatusTest" />
+      <option name="METHOD_NAME" value="TestSearchPetByStatus" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchPetTest.SearchExistentPetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdatePetDataTest.UpdateExistentPetDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="petStoreTest" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +121,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.com.arthur.petstore" />
-      <option name="MAIN_CLASS_NAME" value="br.com.arthur.petstore.SearchPetTest" />
-      <option name="METHOD_NAME" value="SearchExistentPetTest" />
+      <option name="MAIN_CLASS_NAME" value="br.com.arthur.petstore.UpdatePetDataTest" />
+      <option name="METHOD_NAME" value="UpdateExistentPetDataTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchPetTest.SearchInvalidPetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdatePetDataTest.UpdateNonExistentPedDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="petStoreTest" />
       <extension name="coverage">
         <pattern>
@@ -138,14 +137,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.com.arthur.petstore" />
-      <option name="MAIN_CLASS_NAME" value="br.com.arthur.petstore.SearchPetTest" />
-      <option name="METHOD_NAME" value="SearchInvalidPetTest" />
+      <option name="MAIN_CLASS_NAME" value="br.com.arthur.petstore.UpdatePetDataTest" />
+      <option name="METHOD_NAME" value="UpdateNonExistentPedDataTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="br.com.arthur.petstore in petStoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdatePetDataTest.UpdateNonExistentPetDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="petStoreTest" />
       <extension name="coverage">
         <pattern>
@@ -154,7 +153,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.com.arthur.petstore" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="br.com.arthur.petstore.UpdatePetDataTest" />
+      <option name="METHOD_NAME" value="UpdateNonExistentPetDataTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.br.com.arthur.petstore in petStoreTest" />
-        <item itemvalue="JUnit.SearchPetTest.SearchExistentPetTest" />
-        <item itemvalue="JUnit.PetOrderTest.PetOrderRegisterSucess" />
         <item itemvalue="JUnit.petstore in petStoreTest" />
-        <item itemvalue="JUnit.SearchPetTest.SearchInvalidPetTest" />
+        <item itemvalue="JUnit.SearchPetByStatusTest.TestSearchPetByStatus" />
+        <item itemvalue="JUnit.UpdatePetDataTest.UpdateNonExistentPetDataTest" />
+        <item itemvalue="JUnit.UpdatePetDataTest.UpdateNonExistentPedDataTest" />
+        <item itemvalue="JUnit.UpdatePetDataTest.UpdateExistentPetDataTest" />
       </list>
     </recent_temporary>
   </component>
