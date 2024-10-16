@@ -8,12 +8,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class UpdatePetData {
-
-    @BeforeAll
-    public static void setup() {
-        RestAssured.baseURI = "https://petstore.swagger.io/v2";
-    }
+public class UpdatePetDataTest extends BaseTest {
 
     //1. Atualizar dados de um pet existente (PUT /pet)
     @Test

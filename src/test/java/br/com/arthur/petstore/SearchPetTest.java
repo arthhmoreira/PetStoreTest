@@ -1,20 +1,11 @@
 package br.com.arthur.petstore;
 
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.testng.annotations.Ignore;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SearchPetTests {
-
-    @BeforeAll
-    public static void setup() {
-        RestAssured.baseURI = "https://petstore.swagger.io/v2";
-    }
+public class SearchPetTest extends BaseTest {
 
     // 1. Pesquisar por um pet inexistente (GET /pet/{petId})
     @Test
@@ -38,7 +29,7 @@ public class SearchPetTests {
     @Test
     public void SearchExistentPetTest() {
 
-        int petIdExistent = 123;
+        int petIdExistent = 10;
 
             // Given
             given()

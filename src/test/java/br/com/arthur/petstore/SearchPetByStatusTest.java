@@ -1,18 +1,11 @@
 package br.com.arthur.petstore;
 
-import io.restassured.RestAssured;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class SearchPetByStatus {
-
-    @BeforeAll
-    public static void setup() {
-        RestAssured.baseURI = "https://petstore.swagger.io/v2";
-    }
+public class SearchPetByStatusTest extends BaseTest {
 
     //1. Pesquisar por pets com status “pending” (GET /pet/findByStatus)
     @Test

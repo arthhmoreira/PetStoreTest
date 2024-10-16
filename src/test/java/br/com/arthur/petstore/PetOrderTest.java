@@ -1,19 +1,11 @@
 package br.com.arthur.petstore;
-
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class PetOrderTests {
-
-    @BeforeAll
-    public static void setup() {
-        RestAssured.baseURI = "https://petstore.swagger.io/v2";
-    }
+public class PetOrderTest extends BaseTest {
 
     // 1. Cadastro novo pedido de pet com sucesso (POST /store/order)
     @Test
@@ -31,7 +23,8 @@ public class PetOrderTests {
                 // Then
                     .then()
                     .statusCode(200)        // STATUS CODE 200 (Sucess)
-                    .body("status", equalTo("placed"));
+                    .body("status", equalTo("placed"))
+                    .body("petId", equalTo(0));
     }
 
     // 2. Cadastro de novo pedido de pet inválido (POST /store/order)
