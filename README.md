@@ -1,6 +1,6 @@
 # PetStoreTest
 
-Um projeto feito para o processo seletivo da Base2 Tecnologia utilizando RestAssured e Java.
+Um projeto feito para o processo seletivo utilizando RestAssured e Java.
 
 ## Índice
 
