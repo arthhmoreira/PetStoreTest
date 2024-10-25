@@ -7,5 +7,6 @@ public class BaseTest {
     @BeforeAll
     public static void setup() {
         RestAssured.baseURI = "https://petstore.swagger.io/v2";
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
     }
 }
