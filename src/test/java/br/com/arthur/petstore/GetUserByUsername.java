@@ -3,7 +3,6 @@ package br.com.arthur.petstore;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.basePath;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
