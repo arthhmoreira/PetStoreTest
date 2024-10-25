@@ -1,5 +1,6 @@
 package br.com.arthur.petstore;
 
+import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -8,6 +9,8 @@ import static org.hamcrest.Matchers.equalTo;
 public class SearchPetTest extends BaseTest {
 
     // 1. Pesquisar por um pet inexistente (GET /pet/{petId})
+
+    private static final String PETID_ENDPOINT = "/pet/{petId}";
 
     @Test
     public void SearchInexistentPetTest() {
@@ -19,10 +22,10 @@ public class SearchPetTest extends BaseTest {
             .pathParam("petId", petIdInexistent)
             // When
             .when()
-                .get("/pet/{petId}")
+                .get(PETID_ENDPOINT)
             // Then
             .then()
-                .statusCode(404)  // STATUS CODE 404 (Not Found)
+                .statusCode(HttpStatus.SC_NOT_FOUND)  // STATUS CODE 404
                 .body("message", equalTo("Pet not found"));
     }
 
@@ -38,10 +41,10 @@ public class SearchPetTest extends BaseTest {
             .pathParam("petId", petIdExistent)
             // When
             .when()
-                .get("/pet/{petId}")
+                .get(PETID_ENDPOINT)
             // Then
-                .then()
-                .statusCode(200); // SUCCESS
+            .then()
+                .statusCode(HttpStatus.SC_OK); // STATUS CODE 200
     }
     // 3. Pesquisar de forma inválida (GET /pet/{petId})
 
@@ -56,10 +59,10 @@ public class SearchPetTest extends BaseTest {
 //            .pathParam("petId", petIdInvalid)
 //            // When
 //            .when()
-//                .get("/pet/{petId}")
+//                .get(PETID_ENDPOINT)
 //            // Then
 //            .then()
-//                .statusCode(400)  // STATUS CODE 400 (Bad Request)
+//                .statusCode(HttpStatus.SC_BAD_REQUEST)  // STATUS CODE 400
 //                .body("message", equalTo("Invalid ID supplied"));
 //    }
 }

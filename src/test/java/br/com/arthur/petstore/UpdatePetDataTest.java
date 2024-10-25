@@ -1,6 +1,7 @@
 package br.com.arthur.petstore;
 
 import io.restassured.http.ContentType;
+import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
@@ -9,6 +10,8 @@ import static org.hamcrest.Matchers.*;
 public class UpdatePetDataTest extends BaseTest {
 
     //1. Atualizar dados de um pet existente (PUT /pet)
+
+    private static final String PET_ENDPOINT = "/pet";
 
     @Test
     public void UpdateExistentPetDataTest() {
@@ -20,10 +23,11 @@ public class UpdatePetDataTest extends BaseTest {
             .body(petJson)
         // When
         .when()
-            .put("/pet/")
+            .put(PET_ENDPOINT)
         // Then
         .then()
-            .statusCode(200)    // SUCCESS
+            .statusCode(HttpStatus.SC_OK)    // STATUS CODE 200
+            .body("id", is(notNullValue()))
             .body("name", equalTo("Cachorro"))
             .body("status", equalTo("unavailable"));
     }
@@ -40,10 +44,10 @@ public class UpdatePetDataTest extends BaseTest {
             .body(petJson)
         // When
         .when()
-            .put("/pet/")
+            .put(PET_ENDPOINT)
         // Then
         .then()
-            .statusCode(400)  // BAD REQUEST
+            .statusCode(HttpStatus.SC_BAD_REQUEST)  // STATUS CODE 400
             .body("message", equalTo("bad input"));
     }
 }

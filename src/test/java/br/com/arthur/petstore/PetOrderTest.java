@@ -1,13 +1,16 @@
 package br.com.arthur.petstore;
 import io.restassured.http.ContentType;
+import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.*;
 
 public class PetOrderTest extends BaseTest {
 
     // 1. Cadastro novo pedido de pet com sucesso (POST /store/order)
+
+    private static final String STOREORDER_ENDPOINT = "/store/order";
 
     @Test
     public void PetOrderRegisterSuccess() {
@@ -20,10 +23,11 @@ public class PetOrderTest extends BaseTest {
             .body(orderJson)
             // When
             .when()
-                .post("/store/order")
+                .post(STOREORDER_ENDPOINT)
             // Then
                 .then()
-                .statusCode(200)        // SUCCESS
+                .statusCode(HttpStatus.SC_OK)        // STATUS CODE 200
+                .body("id", is(notNullValue()))
                 .body("petId", equalTo(0))
                 .body("quantity", equalTo(0))
                 .body("shipDate", equalTo("2024-10-16T04:45:17.806+0000"))
@@ -44,10 +48,10 @@ public class PetOrderTest extends BaseTest {
             .body(orderJson)
             // When
             .when()
-                .post("/store/order")   // POST
+                .post(STOREORDER_ENDPOINT)   // POST
             // Then
             .then()
-                .statusCode(400)        // STATUS CODE 400 (Bad Request )
+                .statusCode(HttpStatus.SC_BAD_REQUEST)     // STATUS CODE 400
                 .body("message", equalTo("bad input"));
     }
 }

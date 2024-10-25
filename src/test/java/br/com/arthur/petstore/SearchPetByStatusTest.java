@@ -1,5 +1,6 @@
 package br.com.arthur.petstore;
 
+import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -8,6 +9,9 @@ import static org.hamcrest.Matchers.*;
 public class SearchPetByStatusTest extends BaseTest {
 
     //1. Pesquisar por pets com status “pending” (GET /pet/findByStatus)
+
+    private static final String FINDBYSTATUS_ENDPOINT = "/pet/findByStatus";
+
     @Test
     public void TestSearchPetByStatus() {
         String status = "pending";
@@ -17,10 +21,10 @@ public class SearchPetByStatusTest extends BaseTest {
             .queryParam("status", status)
             // When
             .when()
-                .get("/pet/findByStatus")
+                .get(FINDBYSTATUS_ENDPOINT)
             // Then
             .then()
-                .statusCode(200)  // SUCCESS
+                .statusCode(HttpStatus.SC_OK)  // STATUS CODE 200
                 .body("status", everyItem(equalTo(status)));
     }
 
@@ -31,18 +35,14 @@ public class SearchPetByStatusTest extends BaseTest {
 //    public void TestSearchPetByStatusInvalid() {
 //        String status = "invalido";
 //
-//        String responseBody =
 //        // Given
 //        given()
 //            .queryParam("status", status)
 //            // When
 //            .when()
-//                .get("/pet/findByStatus")
+//                .get(FINDBYSTATUS_ENDPOINT)
 //            // Then
 //            .then()
-//                .statusCode(400)  // STATUS CODE 400 (Bad Request)
-//                .extract().body().asString();
-//
-//        System.out.println("Response Body: " + responseBody);
+//                .statusCode(HttpStatus.SC_BAD_REQUEST) // STATUS CODE 400
 //    }
 }
