@@ -16,7 +16,7 @@ public class UserRegister extends BaseTest {
     @Test
     public void UserRegisterSuccess() {
 
-        String orderJson = "{ \"id\": 0, \"username\": \"nameuser\", \"firstName\": \"Primeiro\", \"lastName\": \"Teste\", \"email\": \"teste@email.com\", \"password\": \"123456\", \"phone\": 31999999999, \"userStatus\": 0 }";
+        String orderJson = "{ \"id\": 0, \"username\": \"user1\", \"firstName\": \"Primeiro\", \"lastName\": \"Teste\", \"email\": \"teste@email.com\", \"password\": \"123456\", \"phone\": 31999999999, \"userStatus\": 0 }";
 
         // Given
         given()
@@ -29,7 +29,6 @@ public class UserRegister extends BaseTest {
             .then()
                 .statusCode(HttpStatus.SC_OK)        // STATUS CODE 200
                 .body("code", equalTo(200));
-
     }
 
     // 2. Exclusão de usuário com sucesso (DELETE /user)
